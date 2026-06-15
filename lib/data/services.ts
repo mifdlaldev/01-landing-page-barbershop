@@ -1,14 +1,7 @@
 /**
  * Showcase: discriminated unions + type-safe icon references
  */
-import {
-  Coffee,
-  Crop,
-  Lightning,
-  Scissors,
-  Sparkle,
-  Star,
-} from "@phosphor-icons/react/dist/ssr";
+import { Coffee, Crop, Lightning, Scissors, Sparkle, Star } from "@phosphor-icons/react/dist/ssr";
 import type { ComponentType, SVGProps } from "react";
 
 export type Service = {
@@ -45,7 +38,8 @@ export const services: Service[] = [
     price: 120_000,
     duration: 30,
     icon: Star as unknown as Service["icon"],
-    description: "Trim, shape, oil treatment, hot towel. For the man whose beard is its own accessory.",
+    description:
+      "Trim, shape, oil treatment, hot towel. For the man whose beard is its own accessory.",
   },
   {
     id: "hot-shave",

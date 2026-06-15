@@ -16,8 +16,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: "daniel",
-    quote:
-      "They remember my name, my coffee, and that I hate small talk. Perfect.",
+    quote: "They remember my name, my coffee, and that I hate small talk. Perfect.",
     author: "Daniel K.",
     context: "Expat",
     when: "1 month ago",
@@ -39,7 +38,8 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: "surya",
-    quote: "Rio did my wedding cut at 6am. He was late by 3 minutes. Still the best cut of my life.",
+    quote:
+      "Rio did my wedding cut at 6am. He was late by 3 minutes. Still the best cut of my life.",
     author: "Surya M.",
     context: "Wedding client",
     when: "1 month ago",

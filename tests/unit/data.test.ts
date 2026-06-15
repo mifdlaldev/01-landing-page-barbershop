@@ -1,7 +1,7 @@
-import { describe, it, expect } from "vitest";
-import { services } from "@/lib/data/services";
+import { describe, expect, it } from "vitest";
 import { barbers } from "@/lib/data/barbers";
 import { faqs } from "@/lib/data/faqs";
+import { services } from "@/lib/data/services";
 import { testimonials } from "@/lib/data/testimonials";
 
 describe("static data", () => {
