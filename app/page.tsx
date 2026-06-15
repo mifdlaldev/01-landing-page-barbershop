@@ -7,9 +7,7 @@ export default function Home() {
             Est. 2018 — Kemang, Jakarta
           </p>
           <h1 className="text-display text-bone">SLOWCUTS</h1>
-          <p className="text-body text-bone-2 mt-6">
-            The cut that earns the wait.
-          </p>
+          <p className="text-body text-bone-2 mt-6">The cut that earns the wait.</p>
         </div>
       </section>
     </main>
