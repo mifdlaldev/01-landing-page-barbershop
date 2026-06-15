@@ -10,7 +10,12 @@ export type Service = {
   description: string;
   price: number;
   duration: number; // minutes
-  icon: ComponentType<SVGProps<SVGSVGElement> & { weight?: "duotone" | "fill" | "regular" }>;
+  icon: ComponentType<
+    SVGProps<SVGSVGElement> & {
+      weight?: "duotone" | "fill" | "regular";
+      size?: number;
+    }
+  >;
   featured?: boolean;
 };
 

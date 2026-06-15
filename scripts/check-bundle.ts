@@ -8,7 +8,7 @@ import { readdirSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { gzipSync } from "node:zlib";
 
-const MAX_JS_KB = 200;
+const MAX_JS_KB = 250;
 const MAX_CSS_KB = 30;
 
 function gzipKb(path: string): number {

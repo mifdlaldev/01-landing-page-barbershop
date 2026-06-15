@@ -5,7 +5,7 @@
 type Props = {
   children: React.ReactNode;
   className?: string;
-  as?: "div" | "section" | "article" | "header" | "footer" | "nav" | "main";
+  as?: "div" | "section" | "article" | "header" | "footer" | "nav" | "main" | "ul" | "ol";
 };
 
 export function Container({ children, className = "", as: Tag = "div" }: Props) {
