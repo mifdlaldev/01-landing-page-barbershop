@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  /* === COLOR: Ink & Bone Palette === */
+  --color-ink: #0e0e0e;
+  --color-ink-2: #1a1a1a;
+  --color-ink-3: #2a2a2a;
+  --color-bone: #f4f0e8;
+  --color-bone-2: #e8e4dc;
+  --color-bone-mute: #a8a39a;
+  --color-rust: #b05e3b;
+  --color-rust-2: #c97a52;
+  --color-rust-3: #8b4426;
+
+  /* === TYPOGRAPHY === */
+  --font-heading: var(--font-fraunces), "Times New Roman", serif;
+  --font-body: var(--font-inter-tight), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), "Courier New", monospace;
+
+  /* Type scale (fluid, clamp-based) */
+  --text-display: clamp(3.5rem, 8vw, 7.5rem);
+  --text-h1: clamp(2.5rem, 5vw, 4.5rem);
+  --text-h2: clamp(2rem, 3.5vw, 3rem);
+  --text-h3: clamp(1.5rem, 2vw, 2rem);
+  --text-body: clamp(0.95rem, 1vw, 1.0625rem);
+  --text-small: 0.875rem;
+  --text-mono: 0.8125rem;
+
+  /* === SHADOW === */
+  --shadow-sm: 0 1px 2px rgb(14 14 14 / 0.4);
+  --shadow-md: 0 8px 24px -8px rgb(14 14 14 / 0.6);
+  --shadow-lg: 0 24px 48px -12px rgb(14 14 14 / 0.8);
+
+  /* === RADIUS === */
+  --radius-sm: 4px;
+  --radius: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+
+  /* === ANIMATION === */
+  --duration-instant: 100ms;
+  --duration-fast: 200ms;
+  --duration-base: 300ms;
+  --duration-slow: 500ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* === Z-INDEX === */
+  --z-hide: -1;
+  --z-base: 0;
+  --z-elevated: 10;
+  --z-sticky: 20;
+  --z-overlay: 30;
+  --z-modal: 40;
+  --z-toast: 50;
+}
+
+/* === GLOBAL === */
+@layer base {
+  * {
+    border-color: var(--color-ink-3);
+  }
+  html {
+    font-family: var(--font-body);
+    color: var(--color-bone);
+    background-color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    min-height: 100dvh;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* === REDUCED MOTION === */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
