@@ -206,7 +206,7 @@ export function Booking() {
 
               <div className="grid gap-6 md:grid-cols-2">
                 <Field label="Date" error={errors.date?.message} htmlFor="date">
-                  <div className="rounded-md border border-ink-3 bg-ink p-3 [&_.rdp]:m-0">
+                  <div className="rounded-md border border-ink-3 bg-ink p-3">
                     <DayPicker
                       mode="single"
                       selected={date ? new Date(`${date}T00:00:00`) : undefined}
@@ -228,7 +228,31 @@ export function Booking() {
                         ].join("-");
                         return iso < minDate;
                       }}
-                      showOutsideDays
+                      classNames={{
+                        root: "text-bone text-small",
+                        months: "flex flex-col sm:flex-row gap-2",
+                        month: "space-y-2",
+                        month_caption: "flex justify-between items-center pt-1 pb-2",
+                        caption_label: "font-heading text-bone text-body",
+                        nav: "flex items-center gap-1",
+                        button_previous:
+                          "h-7 w-7 inline-flex items-center justify-center rounded-md text-bone-2 hover:bg-ink-3 hover:text-bone transition-colors",
+                        button_next:
+                          "h-7 w-7 inline-flex items-center justify-center rounded-md text-bone-2 hover:bg-ink-3 hover:text-bone transition-colors",
+                        month_grid: "w-full border-collapse",
+                        weekdays: "flex",
+                        weekday:
+                          "text-bone-mute font-mono text-mono rounded-md w-8 h-7 flex items-center justify-center uppercase",
+                        weeks: "space-y-1",
+                        week: "flex w-full gap-1",
+                        day: "h-8 w-8 p-0 font-normal rounded-md hover:bg-ink-3 transition-colors aria-selected:opacity-100",
+                        day_button:
+                          "h-8 w-8 p-0 font-normal rounded-md hover:bg-ink-3 transition-colors inline-flex items-center justify-center",
+                        selected: "bg-rust text-bone hover:bg-rust-2",
+                        today: "ring-1 ring-rust/60",
+                        disabled: "text-bone-mute/40 hover:bg-transparent",
+                        outside: "text-bone-mute/40",
+                      }}
                     />
                   </div>
                   {date && (
